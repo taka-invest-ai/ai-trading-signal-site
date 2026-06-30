@@ -5,7 +5,7 @@
   --muted: #9ca3af;
   --accent: #7c8cff;
   --border: rgba(138, 162, 216, 0.35);
-  --max-w: 720px;
+  --max-w: 920px;
 }
 
 * {
@@ -39,17 +39,16 @@ a:hover {
 }
 
 .site-header h1 {
-  font-size: 1.35rem;
-  letter-spacing: 0.08em;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
   font-weight: 800;
 }
 
 .site-header p {
   margin-top: 0.35rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.25em;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
   color: #85b7eb;
-  text-transform: uppercase;
 }
 
 nav {
@@ -67,6 +66,82 @@ main {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 1.5rem 1rem 3rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.feature-card {
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(55, 68, 99, 0.75);
+  background: rgba(8, 14, 28, 0.72);
+  box-shadow: inset 3px 0 0 #5b9cff;
+}
+
+.feature-card__title {
+  margin: 0 0 0.45rem;
+  padding: 0 0 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #e2e9f6;
+  border-bottom: 1px solid rgba(124, 140, 255, 0.28);
+}
+
+.feature-card__body {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #b8c4d8;
+}
+
+.feature-card--symbols {
+  background: linear-gradient(145deg, rgba(59, 108, 200, 0.2) 0%, rgba(8, 14, 28, 0.88) 72%);
+  border-color: rgba(91, 156, 255, 0.42);
+  box-shadow: inset 3px 0 0 #5b9cff;
+}
+
+.feature-card--symbols .feature-card__title {
+  color: #d4e6ff;
+  border-bottom-color: rgba(91, 156, 255, 0.45);
+}
+
+.feature-card--macro {
+  background: linear-gradient(145deg, rgba(124, 92, 220, 0.22) 0%, rgba(8, 14, 28, 0.88) 72%);
+  border-color: rgba(167, 139, 250, 0.42);
+  box-shadow: inset 3px 0 0 #a78bfa;
+}
+
+.feature-card--macro .feature-card__title {
+  color: #e4d9ff;
+  border-bottom-color: rgba(167, 139, 250, 0.45);
+}
+
+.feature-card--mortgage {
+  background: linear-gradient(145deg, rgba(16, 148, 136, 0.2) 0%, rgba(8, 14, 28, 0.88) 72%);
+  border-color: rgba(52, 211, 153, 0.4);
+  box-shadow: inset 3px 0 0 #34d399;
+}
+
+.feature-card--mortgage .feature-card__title {
+  color: #c9f5e5;
+  border-bottom-color: rgba(52, 211, 153, 0.45);
+}
+
+.feature-card--sentiment {
+  background: linear-gradient(145deg, rgba(217, 119, 6, 0.2) 0%, rgba(8, 14, 28, 0.88) 72%);
+  border-color: rgba(251, 191, 36, 0.42);
+  box-shadow: inset 3px 0 0 #fbbf24;
+}
+
+.feature-card--sentiment .feature-card__title {
+  color: #ffe8b8;
+  border-bottom-color: rgba(251, 191, 36, 0.45);
 }
 
 main h2 {
@@ -131,6 +206,12 @@ main ul {
   border: none;
   background: transparent;
   padding: 0 0 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
